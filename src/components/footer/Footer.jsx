@@ -19,8 +19,8 @@ function Footer() {
                     <div>
                         <h6>{data?.location}</h6>
                         <div className="flex flex-col">
-                            <a href="">{data?.mail}</a>
-                            <a href={`https://wa.me/${number}`}>{data?.number}</a>
+                            <a href={`mailto:${data?.mail}`}> {data?.mail} </a>
+                            <a href={`https://wa.me/${number}`}> {data?.number} </a>
                         </div>
                     </div>
                     <div className="flex gap-2">

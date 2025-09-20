@@ -9,11 +9,14 @@ import FullImg from "./FullImg";
 import VideoPlayer from "./VideoPlayer";
 import GridImg from "./GridImg";
 import Text from "./Text";
+import OpenGalery from "../OpenGalery";
+import { useModal } from "../../context/ModalContext";
 
 function Gallery() {
     const [data, setData] = useState([]);
     const { id } = useParams();
 
+    const { isModalOpen } = useModal()
     useEffect(() => {
         getGallery(id).then((res) => setData(res));
     }, [id])
@@ -41,6 +44,8 @@ function Gallery() {
                     }
                 </div>
             </div>
+            {isModalOpen && <OpenGalery />}
+
             <ScrollUp />
         </>
 

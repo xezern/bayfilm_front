@@ -7,6 +7,7 @@ import { scrollYuxari } from "./components/utils/ScrolTop"
 import Contact from "./components/contact/Contact"
 import GalleryCategory from "./components/category/GalleryCategory"
 import Gallery from "./components/gallery/Gallery"
+import ModalProvaider from "./context/ModalContext"
 
 function App() {
   const { pathname } = useLocation()
@@ -31,7 +32,11 @@ function App() {
           <Route index element={<GalleryCategory />} />
         </Route>
         <Route path="/contact" element={<Contact />} />
-        <Route path="/galery/:id" element={<Gallery />} />
+        <Route path="/galery/:id" element={
+          <ModalProvaider>
+            <Gallery />
+          </ModalProvaider>
+        } />
       </Routes>
     </div>
   )
