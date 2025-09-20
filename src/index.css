@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@import "plyr-react/plyr.css";
+
+body {
+  font-family: "Manrope", sans-serif;
+}
+
+body h1 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+body h3 {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.plyr--full-ui input[type=range] {
+  color: #FFF6C3 !important
+}
+
+.plyr__control:hover {
+  transition: .35s;
+  background-color: #FFF6C3 !important;
+
+  svg {
+    color: #000 !important;
+  }
+}
+
+.plyr {
+  max-height: 498px !important;
+}
+
+.header {
+  @media (min-width: 992px) {
+    background-position-y: 65% !important;
+  }
+}
+
+.category {
+  @media (max-width: 992px) {
+    background-position-y: 65% !important;
+    /* yuxarıya çəkir */
+  }
+}
